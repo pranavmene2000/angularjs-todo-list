@@ -1,0 +1,25 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "Learn about Polymer",
+      "created_at": "5/1/2011, 8:54:37 PM",
+      "Tags": ["Web Development", "Web Components"],
+      "is_complete": true
+    },
+    {
+      "id": 2,
+      "text": "Watch Pluralsight course on Docker",
+      "created_at": "5/2/2011, 8:54:37 PM",
+      "Tags": ["Devops", "Docker"],
+      "is_complete": true
+    },
+    {
+      "id": 5,
+      "text": "Transition code base to ES6",
+      "created_at": "5/5/2014, 8:54:37 PM",
+      "Tags": ["ES6", "Web Development"],
+      "is_complete": false
+    }
+  ]
+}

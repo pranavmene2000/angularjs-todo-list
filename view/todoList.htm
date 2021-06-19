@@ -1,0 +1,26 @@
+<div class="main_content">
+    <toaster-container toaster-options="{ 'time-out': 3000, 'position-class': 'toast-bottom-right' }">
+    </toaster-container>
+    <div class="wrapper">
+        <header style="text-align:center;">Todo List 📃</header>
+        <div class="inputField">
+            <input type="text" ng-model="todoText" placeholder="Add your new todo">
+            <button ng-click="addNewTodo()"><i class="fa fa-plus-circle"></i></button>
+        </div>
+        <ul class="todoList">
+            <li class="li-{{todo.is_complete}}"
+                ng-repeat="todo in todos | orderBy : '-created_at' : reverse track by todo.created_at"
+                ng-click="completeTodo(todo)">
+                <p class="strikeText-{{todo.is_complete}}">{{todo.text}}</p>
+                <button ng-click="deleteTodo(todo)">
+                    <i class="fa fa-trash-o"></i>
+                </button>
+            </li>
+        </ul>
+        <div ng-if="todos.length !== 0" class="footer">
+            <span><span style="color : rgb(142, 73, 232);font-weight : bold;">{{remainings()}}</span> of
+                {{todos.length}} <span class="pendingTasks"></span> tasks pending </span>
+            <button ng-click="clearCompleted()">Clear Completed</button>
+        </div>
+    </div>
+</div>
